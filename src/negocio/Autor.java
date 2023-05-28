@@ -1,6 +1,10 @@
 package negocio;
 
-public class Autor {
+import java.util.Collection;
+
+import persistencia.AutorDAO;
+
+public class Autor extends Entidade {
 	
 	//propriedade da classe
 	
@@ -13,11 +17,11 @@ public class Autor {
 		super();
 	}
 
-	public Autor(String nome) {
-		super();
+	public Autor(int id, String nome) {
+		super(id);
 		this.nome = nome;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
@@ -26,5 +30,9 @@ public class Autor {
 		this.nome = nome;
 	}
 	
+	
+	public static Collection<Autor> getTodos() throws Exception {
+		return new AutorDAO().getTodos();
+	}
 	
 }
