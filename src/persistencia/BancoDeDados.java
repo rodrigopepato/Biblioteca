@@ -16,7 +16,7 @@ public class BancoDeDados {
 	//METODO DA CLASSE
 	
 	void conectar() throws Exception {
-		objConexao = DriverManager.getConnection ("jdbc:oracle:thin:@//localhost:1521/XE?user=hr&password=Pepauli2009");
+		objConexao = DriverManager.getConnection ("jdbc:oracle:thin:@//localhost:1521/XE?user=hr&password");
 	}
 	
 	void desconectar() throws Exception {
